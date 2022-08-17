@@ -3,3 +3,12 @@
     padding: 20px;
 }
 
+/**para celular**/
+@media(max-width:575px){
+    div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    }
+
