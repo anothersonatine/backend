@@ -1,32 +1,36 @@
+/**.container-fluid{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    }
+.btn{
+    border-width: medium;
+} 
+.row{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+**/
 
 
 #logoAP{
     width: 150px;
 }
-.row{
-    float: left;
-}
-/**.container{
-    margin: 0;
-    margin-right: 0;
-    margin-left: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-}
 
 img{
-    width: 50px;
+    margin: auto 15px;
+
 }
-.btn{
-    border-width: medium;
-}
+
 /**para celular
-@media(max-width:575px){
+@media(max-width:450px){
     .redes{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
-}**/
- 
+}
+**/ 

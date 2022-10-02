@@ -1,14 +1,18 @@
 div{
-    background-color: rgb(158, 29, 29);
-}
-.row{
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: 20px;
-    margin-left: 20px;
-    flex-direction: row;
-    align-content: space-between;
-    justify-content: space-between;
-    align-items: center;
+    
+    background-color: #040D19;
 }
 
+app-logo{
+    float:left;
+}
+.row{
+    position: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0px;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    }
+    
