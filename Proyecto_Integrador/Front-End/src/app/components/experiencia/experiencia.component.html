@@ -1,7 +1,12 @@
+<div class="page-header">
+    <h1></h1>
+  </div>
+  
+<div class="jumbotron">
 <div class="row">
     <h1>Experiencia laboral</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged"  data-toggle="modal" data-target="#agregarExperiencia"  data-whatever="@mdo">
             Nueva Experiencia
         </button>
     </div>
@@ -16,7 +21,7 @@
                     </td>
                     <td>{{Experiencia.descripcionE}}</td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
+                        <button class="btn btn-light" data-toggle="modal" data-target="#editarExperiencia"  data-whatever="@mdo" routerLink="/editexp/{{Experiencia.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
                     <td *ngIf="isLogged">
@@ -28,4 +33,5 @@
         </table>
     </div>
 
+</div>
 </div>

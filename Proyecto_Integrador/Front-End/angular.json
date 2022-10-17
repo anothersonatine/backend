@@ -67,6 +67,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options":{
+            "browserTarget": "Proyecto_Integrador:build"
+          },
           "configurations": {
             "production": {
               "browserTarget": "Proyecto_Integrador:build:production"

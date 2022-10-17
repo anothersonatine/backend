@@ -1,4 +1,9 @@
-.row{
-    padding: 20px;
-    background-color: #90b1c2;
+.page-header{
+    padding-top: 7.0rem;
+}
+.jumbotron{
+    /**background: #26547D;**/
+    margin-left: 5.0rem;
+    padding-top: 1.5rem;
+    margin-right: 1.0rem;
 }

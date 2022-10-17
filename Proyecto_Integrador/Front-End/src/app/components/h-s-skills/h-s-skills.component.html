@@ -1,7 +1,11 @@
+<div class="page-header">
+    <h1></h1>
+  </div>
+<div class="jumbotron">
    <div class="row">
             <div class="col-lg-11"><h1>Hard & Soft skills</h1></div>
             <div class="col-lg-2">
-                <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged">Nueva Skill</button>
+                <button type="button" routerLink="/newskill" class="btn btn-dark" *ngIf="isLogged" data-toggle="modal" data-target="#agregarSkill"  data-whatever="@mdo" >Nueva Skill</button>
             </div>
         
         
@@ -27,7 +31,7 @@
         
                 <div>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editskill/{{skill.id}}">
+                        <button class="btn btn-light" data-toggle="modal" data-target="#editarSkill" data-whatever="@mdo" routerLink="/editskill/{{skill.id}}">
                             <i class="bi bi-pencil-fill"></i></button>
                     </td>
                     <td *ngIf="isLogged">
@@ -38,5 +42,5 @@
                 
             </div>
         </div>        
-
+</div>
        

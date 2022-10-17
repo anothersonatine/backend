@@ -1,7 +1,11 @@
+<div class="page-header">
+    <h1></h1>
+  </div>
+<div class="jumbotron">
 <div class="row">
     <h1>Educacion</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
+        <button type="button" class="btn btn-dark" data-toggle="modal" routerLink="/nuevaedu" *ngIf="isLogged" data-target="#agregarEducacion" data-whatever="@mdo" >
             Agregar Educacion
         </button>
     </div>
@@ -16,7 +20,7 @@
                     </td>
                     <td>{{Educacion.descripcionE}}</td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
+                        <button class="btn btn-light"  data-toggle="modal" data-target="#editarEducacion" data-whatever="@mdo" routerLink="/editedu/{{Educacion.id}}">
                             <i class="bi bi-pencil-fill"></i> EDITAR</button>
                     </td>
                     <td *ngIf="isLogged">
@@ -28,4 +32,5 @@
         </table>
     </div>
 
+</div>
 </div>

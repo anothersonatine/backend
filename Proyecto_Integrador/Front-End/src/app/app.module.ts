@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -29,7 +29,15 @@ import { NewSkillComponent } from './components/h-s-skills/new-skill.component';
 import { EditSkillComponent } from './components/h-s-skills/edit-skill.component';
 import { interceptorProvider } from './service/interceptor.service';
 import { SidebarMenuComponent } from './components/sidebar-menu/sidebar-menu.component';
+import { MatSliderModule } from '@angular/material/slider';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditProyectoComponent } from './components/proyecto/edit-proyecto.component';
+import { NewProyectoComponent } from './components/proyecto/new-proyecto.component';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
+import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
+
 
 
 @NgModule({
@@ -54,19 +62,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     NewSkillComponent,
     EditSkillComponent,
     SidebarMenuComponent,
+    EditProyectoComponent,
+    NewProyectoComponent,
+    EditAcercaDeComponent,
   ],
     
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     NgCircleProgressModule.forRoot({}),
     HttpClientModule,
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
    MatIconModule,
+   MatSliderModule,
    BrowserAnimationsModule,
+   provideFirebaseApp(() => initializeApp(environment.firebase)),
+   provideStorage(() => getStorage()),
+
   ],
   providers: [
     interceptorProvider

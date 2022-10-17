@@ -1,9 +1,35 @@
+<div class="page-header">
+    <h1></h1>
+  </div>
+<div class="jumbotron">
 <div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-lg-7">
-            <h1>Portafolio Web</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quidem enim in dolores, optio modi, obcaecati eius perferendis ab accusamus accusantium earum. Sequi accusantium sunt expedita iusto deserunt facilis eligendi?</p>
-        </div>
+    <h1>Proyectos realizados</h1>
+    <div class="col-lg-2">
+        <button type="button" class="btn btn-dark" data-toggle="modal" routerLink="/newproyecto" *ngIf="isLogged" data-target="#agregarProyecto" data-whatever="@mdo" >
+            Agregar Proyecto
+        </button>
     </div>
+    <div class="col lg 1"></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+                <tr *ngFor="let Proyectos of proyectos">
+                    <td>
+                        <h2>{{Proyectos.nombreP}}</h2>
+                    </td>
+                    <td>{{Proyectos.descripcionP}}</td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-light"  data-toggle="modal" data-target="#editarProyecto" data-whatever="@mdo" routerLink="/editproyecto/{{Proyectos.id}}">
+                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-danger" (click)="delete(Proyectos.id)">
+                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
 </div>
