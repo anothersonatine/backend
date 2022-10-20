@@ -1,9 +1,10 @@
-<div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="logIn" aria-hidden="true"data-backdrop="false" >
+<app-banner></app-banner>
+<div class="modal fade" id="logIn" tabindex="-1" role="dialog" aria-labelledby="logIn" data-backdrop="false" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header border-bottom-0">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true"></span>
+          <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
@@ -11,30 +12,23 @@
           <h4>Login</h4>
         </div>
         <div class="d-flex flex-column text-center">
-          <form>
+          <form #f="ngForm" (ngSubmit)="onLogin()" novalidate>
             <div class="form-group">
-              <input type="email" id="nombreUsuario" name="nombreUsuario" class="form-control form-control-lg"
-              [(ngModel)]="nombreUsuario" required />
-            <label class="form-label" for="nombreUsuario">Usuario</label>
-          </div>
-            <div class="form-group">
-              <input type="password" id="password" name="password" class="form-control form-control-lg" [(ngModel)]="password" required />
-              <label class="form-label" for="password">Contraseña</label>
+              <input type="nombreUsuario" class="form-control" id="nombreUsuario" placeholder="Usuario" [(ngModel)]="nombreUsuario" required>
             </div>
-            <button type="button" class="btn btn-info btn-block btn-round">Login</button>
+            <div class="form-group">
+              <input type="password" class="form-control" id="password" placeholder="Contraseña" [(ngModel)]="password" required>
+            </div>
+            <button type="button" class="btn btn-info btn-block btn-round" type="submit">Login</button>
           </form>
         </div>
       </div>
     </div>
   </div>
+</div>
 
 
-
-
-
-
-
-<!--<section class="gradient-custom">
+  <!--<section class="gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col-12 col-md-8 col-lg-6 col-xl-5">

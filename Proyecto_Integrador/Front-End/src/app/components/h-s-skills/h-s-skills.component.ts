@@ -36,6 +36,7 @@ export class HSSkillsComponent implements OnInit {
       this.skillS.delete(id).subscribe(
         data => {
           this.cargarSkills();
+          window.location.reload();
         }, err => {
           alert("No se pudo borrar la skill");
         }

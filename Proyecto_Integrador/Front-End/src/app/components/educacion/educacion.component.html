@@ -18,14 +18,16 @@
                     <td>
                         <h2>{{Educacion.nombreE}}</h2>
                     </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light"  data-toggle="modal" data-target="#editarEducacion" data-whatever="@mdo" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                    <td>
+                        <h2>{{Educacion.descripcionE}}</h2>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        <button class="btn btn-outline-primary"  data-toggle="modal" data-target="#editarEducacion" data-whatever="@mdo" routerLink="/editedu/{{Educacion.id}}">
+                            <i class="bi bi-pencil-square"></i></button>
+                    </td>
+                    <td *ngIf="isLogged">
+                        <button class="btn btn-outline-danger"(click)="delete(Educacion.id)">
+                            <i class="bi bi-trash3"></i></button>
                     </td>
                 </tr>
             </tbody>

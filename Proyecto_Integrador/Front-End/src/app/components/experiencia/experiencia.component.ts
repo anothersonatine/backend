@@ -33,6 +33,7 @@ export class ExperienciaComponent implements OnInit {
       this.sExperiencia.delete(id).subscribe(
         data => {
           this.cargarExperiencia();
+          window.location.reload();
         }, err => {
           alert("No se pudo borrar la experiencia");
         }

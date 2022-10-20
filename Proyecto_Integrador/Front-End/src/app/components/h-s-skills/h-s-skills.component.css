@@ -7,13 +7,14 @@
     padding-top: 1.5rem;
     margin-right: 1.0rem;
 }
+
 .circulo{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-/**para celular**/
+/*para celular*/
 @media(max-width:575px){
     div{
         display: flex;

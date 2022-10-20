@@ -21,6 +21,7 @@ export class EditSkillComponent implements OnInit {
     this.skillS.detail(id).subscribe(
       data => {
         this.skill = data;
+        
       }, err => {
         alert("Error al modificar");
         this.router.navigate(['/h-s-skills']);

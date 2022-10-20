@@ -36,6 +36,7 @@ export class ProyectoComponent implements OnInit {
       this.proyectoS.delete(id).subscribe(
         data => {
           this.cargarProyecto();
+          window.location.reload();
         }, err => {
           alert("No se pudo eliminar");
         }

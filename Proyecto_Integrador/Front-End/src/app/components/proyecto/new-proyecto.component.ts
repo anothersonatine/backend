@@ -25,7 +25,7 @@ export class NewProyectoComponent implements OnInit {
     this.proyectoS.save(proyectos).subscribe(
       data =>{
         alert("Proyecto añadido correctamente");
-        this.router.navigate(['/proyecto']);
+        window.location.reload();
       }, err =>{
         alert("falló");
         this.router.navigate(['/proyecto']);
