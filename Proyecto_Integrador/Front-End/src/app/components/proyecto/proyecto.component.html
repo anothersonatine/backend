@@ -1,3 +1,4 @@
+<body>
 <div class="page-header">
     <h1></h1>
   </div>
@@ -20,6 +21,9 @@
                     <td>
                         <h2>{{Proyectos.descripcionP}}</h2>
                     </td>
+                    <td>
+                        <img src={{Proyectos.img}} class="img fluid" id="proyecto">
+                    </td>
                     <td *ngIf="isLogged">
                         <button class="btn btn-outline-primary"  data-toggle="modal" data-target="#editarProyecto" data-whatever="@mdo" routerLink="/editproyecto/{{Proyectos.id}}">
                             <i class="bi bi-pencil-square"></i></button>
@@ -35,3 +39,12 @@
 
 </div>
 </div>
+</body>
+
+<style>
+    body {
+      background-image: url("");
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+  </style>
