@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Proyectos } from 'src/app/model/proyectos.model';
-import { ImageService } from 'src/app/service/image.service';
+import { ImageProyectoService } from 'src/app/service/image-proyecto.service';
 import { ProyectosService } from 'src/app/service/proyectos.service';
 
 @Component({
@@ -15,7 +15,7 @@ export class NewProyectoComponent implements OnInit {
   img: string
 
   constructor(private proyectoS: ProyectosService, private router: Router,
-    private activatedRouter: ActivatedRoute, public imageService: ImageService) { }
+    private activatedRouter: ActivatedRoute, public imageProyectoService: ImageProyectoService) { }
 
   ngOnInit(): void {
   }
@@ -36,7 +36,7 @@ export class NewProyectoComponent implements OnInit {
   uploadImage($event:any){
     //const id = this.activatedRouter.snapshot.params['id'];//
     const name = "proyecto_new_" + this.nombreP;
-    this.imageService.uploadImage($event, name)
+    this.imageProyectoService.uploadImage($event, name)
   }  
 }
 

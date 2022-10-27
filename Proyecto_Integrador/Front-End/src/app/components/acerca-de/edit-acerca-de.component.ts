@@ -29,18 +29,35 @@ export class EditAcercaDeComponent implements OnInit {
       }
     )
   }
-  onUpdate(): void {
+
+  onUpdate():void {
+    const id = this.activatedRouter.snapshot.params['id'];
+    if(this.imageService.url != "") {
+      this.persona.img = this.imageService.url;
+    }
+    this.personaService.update(id, this.persona).subscribe(
+      data => {
+        this.router.navigate(['/acerca-de']);
+      }, err => {
+        alert("Error al modificar persona");
+        this.router.navigate(['']);
+      }
+    )
+    this.imageService.clearUrl();
+  }
+
+  /*onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.persona.img = this.imageService.url;
     this.personaService.update(id, this.persona).subscribe(
       data => {
-        this.router.navigate(['/acerca-de']);
+        this.router.navigate(['']);
       }, err => {
         alert("Error al modificar");
         this.router.navigate(['/acerca-de']);
       }
     )
-  }
+  }*/
 
 
   uploadImage($event:any){

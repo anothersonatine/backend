@@ -4,14 +4,14 @@ import { Storage, ref, uploadBytes, list, getDownloadURL } from '@angular/fire/s
 @Injectable({
   providedIn: 'root'
 })
-export class ImageService {
+export class ImageProyectoService {
   url: string = ""
 
   constructor(private storage: Storage) { }
 
   public uploadImage($event: any, name: string){
   const file = $event.target.files[0]
-  const imgRef = ref(this.storage, 'imagen/' + name)
+  const imgRef = ref(this.storage, 'imagen_proyecto/' + name)
   uploadBytes(imgRef, file)
   .then(response => {this.getImages()})
   .catch(error => console.log(error))
@@ -27,10 +27,6 @@ export class ImageService {
     })
     .catch()
 
-  }
-
-  clearUrl() {
-    this.url = "";
   }
 
 }

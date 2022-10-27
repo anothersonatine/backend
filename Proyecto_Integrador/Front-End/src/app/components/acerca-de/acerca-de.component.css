@@ -13,12 +13,12 @@
 /*estilo de la foto de perfil*/
 @media(min-width: 576px){
     #fotodeperfil{
-        position: absolute;
-        width:15%;
-        border-radius: 85%;
+    
+        width:90%;
+        border-radius: 75%;
         box-shadow: 3px 3px 3px grey;
-        left: 2%;
-        top: 550px;
+        left: 45%;
+        top: 5px;
     }
 }
 
@@ -37,4 +37,9 @@
 #nombre{
     font-weight: bold;
     margin-top: 30%;
+}
+
+#acercaDe{
+    font-weight: bold;
+    margin-top: 7%;
 }
