@@ -15,10 +15,10 @@ public class dtoProyectos {
     public dtoProyectos() {
     }
 
-    public dtoProyectos(String nombreP, String descripcionP, String img) {
+    public dtoProyectos(String nombreP, String descripcionP) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
-        this.img = img;
+        //this.img = img;
     }
 
     public String getNombreP() {
