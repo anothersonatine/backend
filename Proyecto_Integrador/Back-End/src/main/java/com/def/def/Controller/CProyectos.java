@@ -62,7 +62,7 @@ public class CProyectos {
         }
         
         Proyectos proyectos = new Proyectos(
-                dtoproyectos.getNombreP(), dtoproyectos.getDescripcionP()
+                dtoproyectos.getNombreP(), dtoproyectos.getDescripcionP(), dtoproyectos.getImg()
             );
         sProyectos.save(proyectos);
         

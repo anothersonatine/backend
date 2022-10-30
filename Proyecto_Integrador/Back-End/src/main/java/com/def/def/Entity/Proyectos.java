@@ -19,10 +19,10 @@ public class Proyectos {
     public Proyectos() {
     }
 
-    public Proyectos(String nombreP, String descripcionP) {
+    public Proyectos(String nombreP, String descripcionP, String img) {
         this.nombreP = nombreP;
         this.descripcionP = descripcionP;
-        //this.img = img;
+        this.img = img;
     }
 
     public int getId() {

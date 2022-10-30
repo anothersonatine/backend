@@ -20,11 +20,11 @@ export class ProyectosService {
     return this.httpClient.get<Proyectos>(this.URL + `detail/${id}`);
   }
 
-  public save(proyectos: Proyectos): Observable<any>{
+  public save(Proyectos: Proyectos): Observable<any>{
     return this.httpClient.post<any>(this.URL + 'create', Proyectos);
   }
 
-  public update(id: number, proyectos: Proyectos): Observable<any>{
+  public update(id: number, Proyectos: Proyectos): Observable<any>{
     return this.httpClient.put<any>(this.URL + `update/${id}`, Proyectos);
   }
 

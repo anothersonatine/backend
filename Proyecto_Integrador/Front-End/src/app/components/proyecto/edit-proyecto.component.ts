@@ -31,7 +31,9 @@ export class EditProyectoComponent implements OnInit {
   }
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.proyectos.img = this.imageProyectoService.url;
+    if(this.imageProyectoService.url != ""){
+      this.proyectos.img = this.imageProyectoService.url;
+    }
     this.proyectoS.update(id, this.proyectos).subscribe(
       data => {
         this.router.navigate(['/proyecto']);
@@ -39,13 +41,14 @@ export class EditProyectoComponent implements OnInit {
         alert("Error al modificar");
         this.router.navigate(['/proyectos']);
       }
-    )
+    ) 
+    this.imageProyectoService.clearUrl();
   }
 
 
   uploadImage($event:any){
     //const id = this.activatedRouter.snapshot.params['id'];//
-    const name = "proyecto_edit" + this.nombreP;
-    this.imageProyectoService.uploadImage($event, name)
-  }  
+    const carpeta = "proyecto"
+    this.imageProyectoService.uploadImage($event, carpeta);
+  }
 }

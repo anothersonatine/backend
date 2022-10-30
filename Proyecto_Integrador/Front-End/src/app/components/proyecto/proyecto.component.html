@@ -22,10 +22,10 @@
                         <h2>{{Proyectos.descripcionP}}</h2>
                     </td>
                     <td>
-                        <img src={{Proyectos.img}} class="img fluid" id="proyecto">
+                        <img src={{Proyectos.img}} class="img fluid" id="proyecto" width=140>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-outline-primary"  data-toggle="modal" data-target="#editarProyecto" data-whatever="@mdo" routerLink="/editproyecto/{{Proyectos.id}}">
+                        <button class="btn btn-outline-primary"  data-toggle="modal" data-target="#editProyecto" data-whatever="@mdo" routerLink="/editproyecto/{{Proyectos.id}}">
                             <i class="bi bi-pencil-square"></i></button>
                     </td>
                     <td *ngIf="isLogged">
