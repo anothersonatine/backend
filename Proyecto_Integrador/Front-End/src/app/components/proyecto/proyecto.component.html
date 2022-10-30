@@ -15,8 +15,11 @@
         <table class="table">
             <tbody>
                 <tr *ngFor="let Proyectos of proyectos">
-                    <td>
+                    <td *ngIf='Proyectos.link != ""'>
                         <h2>{{Proyectos.nombreP}}</h2>
+                        <a href={{Proyectos.link}} target="_blank">
+                            <button class="btn btn-dark">Ver Proyecto</button>
+                        </a>
                     </td>
                     <td>
                         <h2>{{Proyectos.descripcionP}}</h2>

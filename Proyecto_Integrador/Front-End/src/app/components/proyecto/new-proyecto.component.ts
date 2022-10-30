@@ -12,7 +12,8 @@ import { ProyectosService } from 'src/app/service/proyectos.service';
 export class NewProyectoComponent implements OnInit {
   nombreP: string;
   descripcionP: string;
-  img: string
+  img: string;
+  link: string
 
   constructor(private proyectoS: ProyectosService, private router: Router,
     private activatedRouter: ActivatedRoute, public imageProyectoService: ImageProyectoService) { }
@@ -22,7 +23,7 @@ export class NewProyectoComponent implements OnInit {
 
   onCreate(): void{
     this.img = this.imageProyectoService.url;
-    const proyectos = new Proyectos(this.nombreP, this.descripcionP, this.img);
+    const proyectos = new Proyectos(this.nombreP, this.descripcionP, this.img, this.link);
     if(this.imageProyectoService.url != "")
     this.proyectoS.save(proyectos).subscribe(
       data =>{
