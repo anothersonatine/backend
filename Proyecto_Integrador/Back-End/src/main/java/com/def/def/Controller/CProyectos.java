@@ -62,7 +62,7 @@ public class CProyectos {
         }
         
         Proyectos proyectos = new Proyectos(
-                dtoproyectos.getNombreP(), dtoproyectos.getDescripcionP(), dtoproyectos.getImg()
+                dtoproyectos.getNombreP(), dtoproyectos.getDescripcionP(), dtoproyectos.getImg(), dtoproyectos.getLink()
             );
         sProyectos.save(proyectos);
         
@@ -86,6 +86,7 @@ public class CProyectos {
         proyectos.setNombreP(dtoproyectos.getNombreP());
         proyectos.setDescripcionP(dtoproyectos.getDescripcionP());
         proyectos.setImg(dtoproyectos.getImg());
+        proyectos.setLink(dtoproyectos.getLink());
         
         sProyectos.save(proyectos);
         
